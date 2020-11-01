@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import Layout from  './Container/Layout/Layout';
 
 function App() {
+  
   return (
     <div className="App">
-      <h1>Welcome to colorex</h1>
+      <Layout/>
     </div>
   );
 }

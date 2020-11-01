@@ -1,0 +1,11 @@
+
+.Color__Box{
+    display: inline-block;
+    width: 150px;
+    border: 1px solid   #ccc;
+    border-radius: 30px;
+    box-shadow: steelblue;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Henny Penny', cursive;
+}

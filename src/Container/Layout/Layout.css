@@ -1,0 +1,45 @@
+.Layout{
+    font-family: 'Grenze Gotisch', cursive;
+    max-width: 1000px;  
+
+    background-color: aliceblue;
+    box-shadow: 10px 10px 8px 10px #888888;
+   
+}
+.Header {
+    background-color: #282c34;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    width: 100%;
+  }
+  .Header >p{
+      margin: 10px;
+  }
+  .Header >h1{
+    position: relative;
+    animation:welcome 3s ease-in-out 0s 1 ;
+}
+  .Color__Board{
+      width: 100%;
+      padding: 7%;
+  }
+  .Select__Bar{
+    background-image: linear-gradient(to right,violet,Indigo,Blue,green,yellow,orange,red);
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    width: 100%;
+  }
+  @keyframes welcome{
+      0%{left: 150px;}
+      75%{left: -20px;}
+      100%{left: 0px;}
+
+  }
