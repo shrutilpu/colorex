@@ -1,7 +1,6 @@
 .Layout{
     font-family: 'Grenze Gotisch', cursive;
     max-width: 1000px;  
-
     background-color: aliceblue;
     box-shadow: 10px 10px 8px 10px #888888;
    
@@ -21,7 +20,7 @@
   }
   .Header >h1{
     position: relative;
-    animation:welcome 3s ease-in-out 0s 1 ;
+    animation:welcome 2s ease-in-out 0s 1 ;
 }
   .Color__Board{
       width: 100%;

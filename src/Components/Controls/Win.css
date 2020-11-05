@@ -1,0 +1,105 @@
+#Winning {
+  width: 90%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5%;
+}
+
+#Winning .Colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Winning .Colors .Color1, #Winning .Colors .Color2 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+#Winning .Colors .Color1 {
+  background-color: chartreuse;
+  -webkit-animation: welcomes 2s ease-in-out 0s 1;
+          animation: welcomes 2s ease-in-out 0s 1;
+}
+
+#Winning .Colors .Color2 {
+  background-color: chocolate;
+  -webkit-animation: welcoms 2s ease-in-out 0s 1;
+          animation: welcoms 2s ease-in-out 0s 1;
+}
+
+.Win {
+  background-color: #3c8d4d;
+}
+
+.Win p {
+  text-align: center;
+  background-color: green;
+  color: greenyellow;
+  padding: 5px;
+}
+
+.Loss {
+  background-color: #ccc;
+}
+
+.Loss p {
+  text-align: center;
+  background-color: #db1515;
+  color: black;
+  padding: 5px;
+}
+
+@-webkit-keyframes welcomes {
+  0% {
+    right: 100px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes welcomes {
+  0% {
+    right: 100px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@-webkit-keyframes welcoms {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes welcoms {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/*# sourceMappingURL=Win.css.map */

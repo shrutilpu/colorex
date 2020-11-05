@@ -1,0 +1,55 @@
+$backColor:rgb(77, 125, 173);
+$height:200px;
+#Winning
+{
+    width: 90%;
+    height:$height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+   .Colors{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       .Color1,.Color2{
+           width: 100px;
+           height: 100px;
+           margin: 10px;
+       }
+       .Color1{
+           background-color: chartreuse;
+           animation:welcomes 2s ease-in-out 0s 1 ;
+        }
+       .Color2{
+           background-color: chocolate;
+           animation: welcoms 2s ease-in-out 0s 1;
+        }
+   }
+}
+.Win{
+    background-color:rgb(60, 141, 77);
+  p{
+      text-align: center;
+      background-color: green;
+      color: greenyellow;
+      padding: 5px;
+  }
+}
+.Loss{
+    background-color: #ccc;
+    p{
+        text-align: center;
+        background-color: rgb(219, 21, 21);
+        color: black;
+        padding: 5px;
+    }
+  }
+  @keyframes welcomes{
+      0%{right: 100px;}
+      100%{right: 0px;}
+  }
+  @keyframes welcoms{
+    0%{left: 100px;}
+    100%{left: 0px;}
+}
