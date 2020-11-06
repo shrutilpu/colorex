@@ -1,5 +1,5 @@
 import ColorBox from '../../Components/ColorPallet/ColorBox';
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import {useStateValue} from '../../StateProvider';
 import {WinningFibo} from '../../Reducer';
 import Win from '../../Components/Controls/Win';
@@ -8,20 +8,32 @@ import './Layout.css'
 function Layout() {
     const ColorArray = ["Red","Green","yellow","violet","blue","AliceBlue","magenta","indigo","orange","cyan"]; 
     const [{round},dispatch] =useStateValue();
+    const [winIndex,setWinIndex] = useState(WinningFibo(round));
     const [win,setWin]=useState(false);
+    const [Showprop,setShowProp] = useState(false);
+     
+    let selectedColor =Number(1);
+    useEffect(() => {
+        setWinIndex(WinningFibo(round));
+    }, [round])
+//############################################## next-round #########################################################
+const nextRoundHandler =()=>{
+    dispatch({
+        type:"INCREMENT_ROUND"
+    });
+    setShowProp(false);
+}
 //###############################################color-selected-function###############################################
     const colorSelectHandler=(index)=>{
+        selectedColor=ColorArray[index-1];
+        setShowProp(true);
         //*************************--IF-WON--***********************
-        const winIndex = WinningFibo(round);
           if(index===winIndex){
            setWin(true);
-           alert("You won!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-           dispatch({
-               type:"INCREMENT_ROUND"
-           });
           }
         //*************************--IF-Lost--***********************
           else{
+              setWin(false);
               alert("You lost!!..Better luck next time");
           }
         }
@@ -30,13 +42,13 @@ function Layout() {
         <div className="Layout">
             <header className="Header">
                 <p>User</p>
-                <h1>Welcome to colorex</h1>
+                <h1>Let's play colorex</h1>
                 <p>{`Round-${round}`}</p>
             </header>
-            {win && <Win Win={true}/>}
-            <h1 className="Select__Bar">Select A color from Color-Board</h1>
-
+            {Showprop && <Win Win={win} setRound={nextRoundHandler} 
+            cancel={()=>setShowProp(false)} color={ColorArray[winIndex-1]}/>}
             <div className="Color__Board">
+            <h1 className="Select__Bar">Select A color from Color-Board</h1>
             {ColorArray.map((color,i)=>{
                  return <ColorBox key={i} color={color} clicked={()=>colorSelectHandler(i+1)}/>
             })}

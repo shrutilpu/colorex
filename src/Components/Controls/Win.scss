@@ -2,12 +2,11 @@ $backColor:rgb(77, 125, 173);
 $height:200px;
 #Winning
 {
-    width: 90%;
+    width: 100%;
     height:$height;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5%;
    .Colors{
        display: flex;
        flex-direction: row;
@@ -18,11 +17,9 @@ $height:200px;
            margin: 10px;
        }
        .Color1{
-           background-color: chartreuse;
            animation:welcomes 2s ease-in-out 0s 1 ;
         }
        .Color2{
-           background-color: chocolate;
            animation: welcoms 2s ease-in-out 0s 1;
         }
    }

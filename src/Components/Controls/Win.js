@@ -6,9 +6,10 @@ function Win(props) {
     return (
         <div className={classes} id="Winning">
             <div className="Colors">
-            <div className="Color1"></div>
-            <div className="Color2"></div></div>
+            <div className="Color1" style={{backgroundColor:`${props.color1}`}}></div>
+            <div className="Color2" style={{backgroundColor:`${props.color2}`}}></div></div>
             <p>{text}</p>
+            <button onClick={props.Win?props.setRound:props.cancel}>{props.Win?"Next":"PlayAgain"}</button>
         </div>
     )
 }
