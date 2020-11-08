@@ -11,6 +11,14 @@ export const WinningFibo =(round)=>{
     } 
     return fib[round]; 
     } 
+
+//#########################--Color-Array--########################################
+export const Colors = [
+                       ["Red","Green","yellow","violet","blue","AliceBlue","magenta","indigo","orange","cyan"],
+                       ["cyan","lightgreen","purple","cerise","apricot","aquamarine","azure","bronze","emerald","olive"],
+                       ["maroon","mauve","ochre","periwinkle","pink","salmon","teal","viridian","turquoise","violet"],
+                       ["scarlet","Tan","slategray","puce","plum","pear","peach","lime","crimson","cerulean"]
+                     ]
 //#########################--initial State--#################################
 export const initialState={
  round:1,

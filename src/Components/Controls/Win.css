@@ -42,8 +42,15 @@
           animation: welcoms 2s ease-in-out 0s 1;
 }
 
+#Winning button {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Grenze Gotisch', cursive;
+}
+
 .Win {
-  background-color: #3c8d4d;
+  background-image: url("https://i.pinimg.com/originals/bb/57/4c/bb574cac2ba548dc2a40bd787038bbab.gif");
+  background-color: blanchedalmond;
 }
 
 .Win p {
@@ -54,6 +61,8 @@
 }
 
 .Loss {
+  background-image: url("https://i.pinimg.com/originals/11/3f/60/113f60be580a09ef0027073423d98f0f.gif");
+  background-size: contain;
   background-color: #ccc;
 }
 

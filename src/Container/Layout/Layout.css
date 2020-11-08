@@ -6,9 +6,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url("https://cdn.lowgif.com/full/712f7c2655cefd5b-pin-by-yikes-on-pinterest-graveyards-pixel-art-background-and-pixel-art-games.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .Header {
-    background-color: #282c34;
+    background-color: rgba(40, 44, 52,0.7);
     min-height: 7vh;
     display: flex;
     align-items: center;
