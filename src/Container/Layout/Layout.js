@@ -36,13 +36,14 @@ function Layout() {
   return()=>{
     unsubscribed();
   };
-  });
+  },[]);
 //#############################################--UseEffect for component updation--#####################3
     useEffect(() => {
         const index = Math.round(Math.random()*3); 
         console.log(index);
         setColorArray(Colors[index]);
         setWinIndex(WinningFibo(round));
+        localStorage.setItem("Round",round);
     }, [round])
 //############################################## next-round #########################################################
 const nextRoundHandler =()=>{
@@ -69,7 +70,7 @@ const nextRoundHandler =()=>{
     return (
         <div className="Layout">
             <header className="Header">
-                {user.email?<p>user.email</p>:<Link to="/login">signIn</Link>}
+                {user?<p>{user.email.split('@')[0]}</p>:<Link to="/login">signIn</Link>}
                 <h1>Let's play colorex</h1>
                 <p>{`Round-${round}`}</p>
             </header>

@@ -12,16 +12,16 @@ export const WinningFibo =(round)=>{
     return fib[round]; 
     } 
 
-//#########################--Color-Array--########################################
+//#########################--Color-Array--##################################################################################
 export const Colors = [
                        ["Red","Green","yellow","violet","blue","AliceBlue","magenta","indigo","orange","cyan"],
                        ["cyan","lightgreen","purple","cerise","apricot","aquamarine","azure","bronze","emerald","olive"],
                        ["maroon","mauve","ochre","periwinkle","pink","salmon","teal","viridian","turquoise","violet"],
                        ["scarlet","Tan","slategray","puce","plum","pear","peach","lime","crimson","cerulean"]
                      ]
-//#########################--initial State--#################################
+//#########################--initial State--#######################################################################################
 export const initialState={
- round:1,
+ round:Number(localStorage.getItem("Round"))||1,
  user:null
 }
 
@@ -34,7 +34,7 @@ const reducer = (state,action)=>{
      }
   case 'INCREMENT_ROUND':
       let Round =state.round;
-      if(Round===6){Round=1;}
+      if(Round>=6){Round=1;}
       else{Round=Round+1;}
     return{
        ...state,
