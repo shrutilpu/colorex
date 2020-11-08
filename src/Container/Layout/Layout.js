@@ -1,18 +1,43 @@
 import ColorBox from '../../Components/ColorPallet/ColorBox';
 import React, { useState,useEffect } from 'react'
-import {useStateValue} from '../../StateProvider';
-import {WinningFibo} from '../../Reducer';
-import {Colors} from '../../Reducer';
-import Win from '../../Components/Controls/Win';
 import './Layout.css'
-
+import {useStateValue} from '../../StateProvider';
+import {WinningFibo,Colors} from '../../Reducer';
+import {Link} from 'react-router-dom';
+import Win from '../../Components/Controls/Win';
+import {auth} from '../../Components/firebase';
 function Layout() {
     const [ColorArray,setColorArray] = useState(Colors[0]);
-    const [{round},dispatch] =useStateValue();
+    const [{user,round},dispatch] =useStateValue();
     const [winIndex,setWinIndex] = useState(WinningFibo(round));
     const [win,setWin]=useState(false);
     const [Showprop,setShowProp] = useState(false);
-    
+  
+//############################################--UseEffect for setting User--##################################
+  //useeffect
+  useEffect(()=>{
+ const unsubscribed = auth.onAuthStateChanged((authuser)=>{
+  if(authuser)
+  {
+  //loggedin
+  dispatch({
+    type:"SET_USER",
+    user:authuser
+  })
+  }
+  else{
+    //loggedout
+    dispatch({
+      type:"SET_USER",
+      user:null
+    })
+  }});
+
+  return()=>{
+    unsubscribed();
+  };
+  });
+//#############################################--UseEffect for component updation--#####################3
     useEffect(() => {
         const index = Math.round(Math.random()*3); 
         console.log(index);
@@ -44,7 +69,7 @@ const nextRoundHandler =()=>{
     return (
         <div className="Layout">
             <header className="Header">
-                <p>User</p>
+                {user.email?<p>user.email</p>:<Link to="/login">signIn</Link>}
                 <h1>Let's play colorex</h1>
                 <p>{`Round-${round}`}</p>
             </header>

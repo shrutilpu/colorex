@@ -1,0 +1,39 @@
+.Login{
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+     height: 100vh;
+     background-color: #d9e1eb;
+   }
+   
+   .Container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid lightgray;
+    color: #000;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input{
+            padding: 5px;
+            border-radius: 20px;
+            width: 98%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+           }
+       }
+   }
+   
+   .Signin{
+   width: 98%;
+   margin-top: 10px;
+   background-color: lightpink;
+   }
+   .CreateAccount{
+   width: 98%;
+   background-color: lightslategray;
+   }
