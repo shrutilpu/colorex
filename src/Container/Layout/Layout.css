@@ -1,48 +1,95 @@
-.Layout{
-    font-family: 'Grenze Gotisch', cursive;
-    max-width: 1000px;  
-    background-color: aliceblue;
-    box-shadow: 10px 10px 8px 10px #ccc;  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-image: url("https://cdn.lowgif.com/full/712f7c2655cefd5b-pin-by-yikes-on-pinterest-graveyards-pixel-art-background-and-pixel-art-games.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
+.Layout {
+  font-family: 'Grenze Gotisch', cursive;
+  max-width: 1000px;
+  background-color: aliceblue;
+  -webkit-box-shadow: 10px 10px 8px 10px #ccc;
+          box-shadow: 10px 10px 8px 10px #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url("https://cdn.lowgif.com/full/712f7c2655cefd5b-pin-by-yikes-on-pinterest-graveyards-pixel-art-background-and-pixel-art-games.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .Header {
-    background-color: rgba(40, 44, 52,0.7);
-    min-height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    width: 100%;
-  }
-  .Header >p{
-      margin: 10px;
-  }
-  .Header >h1{
-    position: relative;
-    animation:welcome 2s ease-in-out 0s 1 ;
+  background-color: rgba(40, 44, 52, 0.7);
+  min-height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 100%;
 }
-  .Color__Board{
-      width: 100%;
-      padding: 7%;
+
+.Header p {
+  margin: 10px;
+}
+
+.Header h1 {
+  position: relative;
+  -webkit-animation: welcome 2s ease-in-out 0s 1;
+          animation: welcome 2s ease-in-out 0s 1;
+}
+
+.Color__Board {
+  width: 100%;
+  padding: 7%;
+}
+
+.Select__Bar {
+  background-image: -webkit-gradient(linear, left top, right top, from(violet), color-stop(Indigo), color-stop(Blue), color-stop(green), color-stop(yellow), color-stop(orange), to(red));
+  background-image: linear-gradient(to right, violet, Indigo, Blue, green, yellow, orange, red);
+  min-height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  width: 85%;
+}
+
+@-webkit-keyframes welcome {
+  0% {
+    left: 150px;
   }
-  .Select__Bar{
-    background-image: linear-gradient(to right,violet,Indigo,Blue,green,yellow,orange,red);
-    min-height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: black;
-    width: 85%;
+  75% {
+    left: -20px;
   }
-  @keyframes welcome{
-      0%{left: 150px;}
-      75%{left: -20px;}
-      100%{left: 0px;}
+  100% {
+    left: 0px;
   }
+}
+
+@keyframes welcome {
+  0% {
+    left: 150px;
+  }
+  75% {
+    left: -20px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/*# sourceMappingURL=Layout.css.map */
